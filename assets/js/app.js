@@ -14,7 +14,7 @@ risk_data.forEach(function(data) {
     data.poverty = +data.poverty;
     data.abbr = data.abbr;
     data.income = +data.income;
-
+ 
     console.log(data.age);
     console.log(data.smokes);
     console.log(data.healthcare);
@@ -90,7 +90,7 @@ scatter_chart.append("g")
         .text(d => d.abbr)
         .attr("x", d => xLinearScale(d.poverty))
         .attr("y", d => yLinearScale(d.healthcare))
-        .attr("dy",-537)
+        .attr("dy",-465)
         .attr("text-anchor", "middle")
         .attr("font-size", "14px")
         .attr("fill", "black");
@@ -102,10 +102,10 @@ scatter_chart.append("g")
    .attr("x", 0 -350)
    .attr("dy", "1em")
    .attr("class", "axisText")
-   .text("<b>Lacks Healthcare (%)</b>");
+   .text("Lacks Healthcare (%)");
 
    scatter_chart.append("text")
-   .attr("transform", `translate(${width/2}, ${height + margin.top -50 })`)
+   .attr("transform", `translate(${width/2}, ${height + 40 })`)
    .attr("class", "axisText")
    .text("In Poverty (%)"); 
 

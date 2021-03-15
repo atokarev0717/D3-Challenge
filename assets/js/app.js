@@ -1,6 +1,8 @@
 // @TODO: YOUR CODE HERE!
 
 //Read CSV File
+function chart() {
+
 d3.csv("./assets/data/data.csv")
     .then(function(risk_data){
 
@@ -20,5 +22,11 @@ console.log(data.poverty);
 console.log(data.abbr);
 console.log(data.income);
 
-});
     });
+
+
+});
+
+};
+
+chart();

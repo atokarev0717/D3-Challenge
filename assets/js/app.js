@@ -30,8 +30,8 @@ risk_data.forEach(function(data) {
     let margin = {
     top: 30,
     right: 30,
-    bottom: 30,
-    left:30
+    bottom: 100,
+    left:80
     };
 
 // set margins
@@ -95,7 +95,19 @@ scatter_chart.append("g")
         .attr("font-size", "14px")
         .attr("fill", "black");
 
-    
+   //axis labels
+   scatter_chart.append("text")
+   .attr("transform", "rotate(-90)")
+   .attr("y", 0 - 45 )
+   .attr("x", 0 -350)
+   .attr("dy", "1em")
+   .attr("class", "axisText")
+   .text("<b>Lacks Healthcare (%)</b>");
+
+   scatter_chart.append("text")
+   .attr("transform", `translate(${width/2}, ${height + margin.top -50 })`)
+   .attr("class", "axisText")
+   .text("In Poverty (%)"); 
 
 });
 
